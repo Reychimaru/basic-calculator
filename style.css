@@ -76,17 +76,19 @@ button {
     border-right: 2px solid #c4c4c4;
 }
 
-button:hover {
-    border: 0px solid black;
-    background-color: #a8a8a8;
-    border-radius: 5p;
-    line-height: 50px;
-    width: 50px;
-    margin: 0px -1px 2px -1px;
-    border-top: 2px solid #585858;
-    border-bottom: 2px solid #a8a8a8;
-    border-left: 2px solid #a8a8a8;
-    border-right: 2px solid #a8a8a8;
+@media (hover: hover) {
+    button:hover {
+        border: 0px solid black;
+        background-color: #a8a8a8;
+        border-radius: 5p;
+        line-height: 50px;
+        width: 50px;
+        margin: 0px -1px 2px -1px;
+        border-top: 2px solid #585858;
+        border-bottom: 2px solid #a8a8a8;
+        border-left: 2px solid #a8a8a8;
+        border-right: 2px solid #a8a8a8;
+    }
 }
 
 #clear-display-btn {
@@ -94,9 +96,11 @@ button:hover {
     color: whitesmoke;
 }
 
-#clear-display-btn:hover {
-    background-color: #a51010;
-    color: #c7c7c7;
+@media (hover: hover) {
+    #clear-display-btn:hover {
+        background-color: #a51010;
+        color: #c7c7c7;
+    }
 }
 
 #canc-btn {
@@ -104,9 +108,11 @@ button:hover {
     color: whitesmoke;
 }
 
-#canc-btn:hover {
-    background-color: #a51010;
-    color: #c7c7c7;
+@media (hover: hover) {
+    #canc-btn:hover {
+        background-color: #a51010;
+        color: #c7c7c7;
+    }
 }
 
 #result-btn {
@@ -114,64 +120,78 @@ button:hover {
     color: whitesmoke;
 }
 
-#result-btn:hover {
-    background-color: #4b4bd1;
+@media (hover: hover) {
+    #result-btn:hover {
+        background-color: #4b4bd1;
+    }
 }
 
 #plusminus-btn {
     background-color: #e7cd37;
 }
 
-#plusminus-btn:hover {
-    background-color: #d3b50b;
+@media (hover: hover) {
+    #plusminus-btn:hover {
+        background-color: #d3b50b;
+    }
 }
 
 #percentage-btn {
     background-color: #e7cd37;
 }
 
-#percentage-btn:hover {
-    background-color: #d3b50b;
+@media (hover: hover) {
+    #percentage-btn:hover {
+        background-color: #d3b50b;
+    }
 }
 
 #divide-btn {
     background-color: rgb(55, 190, 112);
 }
 
-#divide-btn:hover {
-    background-color: rgb(40, 165, 92);
+@media (hover: hover) {
+    #divide-btn:hover {
+        background-color: rgb(40, 165, 92);
+    }
 }
 
 #multiply-btn {
     background-color: rgb(55, 190, 112);
 }
 
-#multiply-btn:hover {
-    background-color: rgb(40, 165, 92);
+@media (hover: hover) {
+    #multiply-btn:hover {
+        background-color: rgb(40, 165, 92);
+    }
 }
 
 #subtract-btn {
     background-color: rgb(55, 190, 112);
 }
 
-#subtract-btn:hover {
-    background-color: rgb(40, 165, 92);
+@media (hover: hover) {
+    #subtract-btn:hover {
+        background-color: rgb(40, 165, 92);
+    }
 }
 
 #add-btn {
     background-color: rgb(55, 190, 112);
 }
 
-#add-btn:hover {
-    background-color: rgb(40, 165, 92);
+@media (hover: hover) {
+    #add-btn:hover {
+        background-color: rgb(40, 165, 92);
+    }
 }
 
 .post-it {
     margin-top: 50px;
-    width: 180px;
+    width: 170px;
     height: 170px;
     background-color: rgba(255, 255, 18, 0.945);
-    padding: 10px;
+    padding: 7px;
     filter: drop-shadow(3px 3px 5px #a59a9a);
     transform: rotate(15deg);
     font-size: 13px;
