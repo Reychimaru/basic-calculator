@@ -128,6 +128,14 @@ button:active {
     background-color: #4b4bd1;
 }
 
+#comma-btn {
+    background-color: #f39578;
+}
+
+#comma-btn:active {
+    background-color: #d37356;
+}
+
 .post-it {
     margin-top: 50px;
     width: 170px;
@@ -137,7 +145,6 @@ button:active {
     filter: drop-shadow(3px 3px 5px #a59a9a);
     transform: rotate(15deg);
     font-size: 13px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .infos {
