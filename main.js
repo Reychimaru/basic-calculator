@@ -5,8 +5,10 @@ const maxDigits = 13
 const digitsLimit = 9999999999999
 
 function errorMessage() {
+    if (displayDown.textContent.length > maxDigits) {
     displayDown.style.fontSize = "25px"
     displayDown.textContent = "Limit Exceeded!"
+    }
 }
 
 function reduceFontSize() {
@@ -89,6 +91,7 @@ function typeResult() {
         displayDown.textContent = result
     } 
     reduceFontSize()
+    errorMessage()
 }
 
 //              Number Buttons                //
