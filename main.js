@@ -239,10 +239,9 @@ function typePercentage() {
         displayMiddle.textContent === "x" ||
         displayMiddle.textContent === "-" ||
         displayMiddle.textContent === "+") {
-        resultPercentage = displayDown.textContent * displayUp.textContent
-        resultPercentage /= 100
-        displayUp.textContent += displayMiddle.textContent + resultPercentage
-        displayDown.textContent = resultPercentage
+            let resultPercentage = (parseFloat(displayDown.textContent) * parseFloat(displayUp.textContent)) / 100;
+            displayUp.textContent += displayMiddle.textContent + resultPercentage;
+            displayDown.textContent = resultPercentage;
     }
     reduceFontSize()
 }
