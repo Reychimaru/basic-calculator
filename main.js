@@ -1,15 +1,19 @@
+let displayUp = document.getElementById("display-up")
+let displayDown = document.getElementById("display-down")
+let displayMiddle = document.getElementById("display-middle")
+
+function formatNumber(num) {
+    return num.toLocaleString('it-IT');
+}
+
 //              Utility Buttons                //
 function clearDisplay() {
-    let displayUp = document.getElementById("display-up")
-    let displayMiddle = document.getElementById("display-middle")
-    let displayDown = document.getElementById("display-down")
     displayUp.textContent = ""
     displayMiddle.textContent = ""
     displayDown.textContent = 0
 }
 
 function canc() {
-    let displayDown = document.getElementById("display-down")
     let lastChar = displayDown.textContent
     if (displayDown.textContent === "0") {
         displayDown.textContent = "0"
@@ -23,9 +27,6 @@ function canc() {
 }
 
 function typeResult() {
-    let displayUp = document.getElementById("display-up")
-    let displayMiddle = document.getElementById("display-middle")
-    let displayDown = document.getElementById("display-down")
     if (displayMiddle.textContent === "÷") {
         numUp = parseFloat(displayUp.textContent)
         numDown = parseFloat(displayDown.textContent)
@@ -59,16 +60,15 @@ function typeResult() {
 
 //              Number Buttons                //
 function type1() {
-    let displayDown = document.getElementById("display-down")
     if (displayDown.textContent === "0") {
         displayDown.textContent = "1"
     } else {
         displayDown.textContent += "1"
     }
+    displayDown.textContent = formatNumber(parseFloat(displayDown.textContent));
 }
 
 function type2() {
-    let displayDown = document.getElementById("display-down")
     if (displayDown.textContent === "0") {
         displayDown.textContent = "2"
     } else {
@@ -77,7 +77,6 @@ function type2() {
 }
 
 function type3() {
-    let displayDown = document.getElementById("display-down")
     if (displayDown.textContent === "0") {
         displayDown.textContent = "3"
     } else {
@@ -86,7 +85,6 @@ function type3() {
 }
 
 function type4() {
-    let displayDown = document.getElementById("display-down")
     if (displayDown.textContent === "0") {
         displayDown.textContent = "4"
     } else {
@@ -95,7 +93,6 @@ function type4() {
 }
 
 function type5() {
-    let displayDown = document.getElementById("display-down")
     if (displayDown.textContent === "0") {
         displayDown.textContent = "5"
     } else {
@@ -104,7 +101,6 @@ function type5() {
 }
 
 function type6() {
-    let displayDown = document.getElementById("display-down")
     if (displayDown.textContent === "0") {
         displayDown.textContent = "6"
     } else {
@@ -114,7 +110,6 @@ function type6() {
 }
 
 function type7() {
-    let displayDown = document.getElementById("display-down")
     if (displayDown.textContent === "0") {
         displayDown.textContent = "7"
     } else {
@@ -123,7 +118,6 @@ function type7() {
 }
 
 function type8() {
-    let displayDown = document.getElementById("display-down")
     if (displayDown.textContent === "0") {
         displayDown.textContent = "8"
     } else {
@@ -132,7 +126,6 @@ function type8() {
 }
 
 function type9() {
-    let displayDown = document.getElementById("display-down")
     if (displayDown.textContent === "0") {
         displayDown.textContent = "9"
     } else {
@@ -141,7 +134,6 @@ function type9() {
 }
 
 function type0() {
-    let displayDown = document.getElementById("display-down")
     if (displayDown.textContent === "0") {
         displayDown.textContent = "0"
     } else {
@@ -149,75 +141,59 @@ function type0() {
     }
 }
 
-function typeDot() {
-    let displayDown = document.getElementById("display-down")
-    if (displayDown.textContent === "0") {
-        displayDown.textContent = "0."
-    } else {
-        displayDown.textContent += "."
+function typeComma() {
+    if (!displayDown.textContent.includes(",")) {
+        if (displayDown.textContent === "0") {
+            displayDown.textContent = "0,"
+        } else {
+            displayDown.textContent += ","
+        }
     }
 }
 
 //              Operator Buttons                //
 
 function typeDivide() {
-    let displayUp = document.getElementById("display-up")
-    let displayDown = document.getElementById("display-down")
-    let displayMiddle = document.getElementById("display-middle")
     displayMiddle.textContent = "÷"
     displayUp.textContent = displayDown.textContent
     displayDown.textContent = "0"
 }
 
 function typeMultiply() {
-    let displayUp = document.getElementById("display-up")
-    let displayDown = document.getElementById("display-down")
-    let displayMiddle = document.getElementById("display-middle")
     displayMiddle.textContent = "x"
     displayUp.textContent = displayDown.textContent
     displayDown.textContent = "0"
 }
 
 function typeSubtract() {
-    let displayUp = document.getElementById("display-up")
-    let displayDown = document.getElementById("display-down")
-    let displayMiddle = document.getElementById("display-middle")
     displayMiddle.textContent = "-"
     displayUp.textContent = displayDown.textContent
     displayDown.textContent = "0"
 }
 
 function typeAdd() {
-    let displayUp = document.getElementById("display-up")
-    let displayDown = document.getElementById("display-down")
-    let displayMiddle = document.getElementById("display-middle")
     displayMiddle.textContent = "+"
     displayUp.textContent = displayDown.textContent
     displayDown.textContent = "0"
 }
 
 function typePercentage() {
-    let displayUp = document.getElementById("display-up")
-    let displayDown = document.getElementById("display-down")
-    let displayMiddle = document.getElementById("display-middle")
-    if (displayMiddle.textContent === "÷" || 
-        displayMiddle.textContent === "x" || 
-        displayMiddle.textContent === "-" || 
+    if (displayMiddle.textContent === "÷" ||
+        displayMiddle.textContent === "x" ||
+        displayMiddle.textContent === "-" ||
         displayMiddle.textContent === "+") {
-            resultPercentage = displayDown.textContent * displayUp.textContent 
-            resultPercentage /= 100
-            displayUp.textContent += displayMiddle.textContent + resultPercentage
-            displayDown.textContent = resultPercentage
-        }
+        resultPercentage = displayDown.textContent * displayUp.textContent
+        resultPercentage /= 100
+        displayUp.textContent += displayMiddle.textContent + resultPercentage
+        displayDown.textContent = resultPercentage
+    }
 }
 
 function typePlusMinus() {
-    let displayDown = document.getElementById("display-down")
     let firstChar = displayDown.textContent
-    if (displayDown.textContent >= 0) {
-        displayDown.textContent = "-" + displayDown.innerText
-    } else if (displayDown.textContent <= 0) {
-        firstChar = firstChar.slice(1)
-        displayDown.textContent = firstChar
+    if (firstChar.startsWith("-")) {
+        displayDown.textContent = firstChar.slice(1);
+    } else {
+        displayDown.textContent = "-" + firstChar;
     }
 }
