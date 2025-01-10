@@ -2,14 +2,14 @@ body {
     background-image: url(deskimage.jpg);
     background-size: 1920px;
     background-repeat: no-repeat;
-    background-position: top -100 center;
+    background-position: top -150 center;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
     display: flex;
     width: 400px;
-    padding-top: 250px;
+    padding-top: 180px;
     margin: 0px auto 0px auto;
 }
 
@@ -74,10 +74,10 @@ button {
     border-bottom: 2px solid #7a7a7a;
     border-left: 2px solid #c4c4c4;
     border-right: 2px solid #c4c4c4;
+    transition: background-color 0.1s ease, transform 0.1s ease;
 }
 
-
-button:hover {
+button:active {
     border: 0px solid black;
     background-color: #a8a8a8;
     border-radius: 5p;
@@ -88,28 +88,35 @@ button:hover {
     border-bottom: 2px solid #a8a8a8;
     border-left: 2px solid #a8a8a8;
     border-right: 2px solid #a8a8a8;
+    transform: scale(0.95);
 }
 
-#clear-display-btn {
-    background-color: firebrick;
+.operators {
+    background-color: #5e9e55;
     color: whitesmoke;
 }
 
+.operators:active {
+    background-color: #28a55c;
+    color: #c7c7c7;
+}
 
-#clear-display-btn:hover {
+.canc-clear {
+    background-color: #d42f2f;
+    color: whitesmoke;
+}
+
+.canc-clear:active {
     background-color: #a51010;
     color: #c7c7c7;
 }
 
-#canc-btn {
-    background-color: firebrick;
-    color: whitesmoke;
+.special-op {
+    background-color: #e7cd37;
 }
 
-
-#canc-btn:hover {
-    background-color: #a51010;
-    color: #c7c7c7;
+.special-op:active {
+    background-color: #d3b50b;
 }
 
 #result-btn {
@@ -117,70 +124,15 @@ button:hover {
     color: whitesmoke;
 }
 
-
-#result-btn:hover {
+#result-btn:active {
     background-color: #4b4bd1;
-}
-
-#plusminus-btn {
-    background-color: #e7cd37;
-}
-
-
-#plusminus-btn:hover {
-    background-color: #d3b50b;
-}
-
-#percentage-btn {
-    background-color: #e7cd37;
-}
-
-
-#percentage-btn:hover {
-    background-color: #d3b50b;
-}
-
-#divide-btn {
-    background-color: rgb(55, 190, 112);
-}
-
-
-#divide-btn:hover {
-    background-color: rgb(40, 165, 92);
-}
-
-#multiply-btn {
-    background-color: rgb(55, 190, 112);
-}
-
-
-#multiply-btn:hover {
-    background-color: rgb(40, 165, 92);
-}
-
-#subtract-btn {
-    background-color: rgb(55, 190, 112);
-}
-
-
-#subtract-btn:hover {
-    background-color: rgb(40, 165, 92);
-}
-
-#add-btn {
-    background-color: rgb(55, 190, 112);
-}
-
-
-#add-btn:hover {
-    background-color: rgb(40, 165, 92);
 }
 
 .post-it {
     margin-top: 50px;
     width: 170px;
     height: 170px;
-    background-color: rgba(255, 255, 18, 0.945);
+    background-color: #ffff12e6;
     padding: 7px;
     filter: drop-shadow(3px 3px 5px #a59a9a);
     transform: rotate(15deg);
