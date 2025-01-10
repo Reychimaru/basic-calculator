@@ -13,7 +13,7 @@
             <br>
             <div class="infos">
                 <span>This calculator is my very first go-solo project done in HTML, CSS and JavaScript.
-                *Character limit has not been implemented yet...
+                    *Character limit has not been implemented yet...
                 </span>
             </div>
             <div class="signature">
@@ -26,39 +26,39 @@
                 <span id="display-middle" type="text"></span>
                 <span id="display-down" type="numitems">0</span>
             </div>
-    
+
             <div class="first-row">
-                <button id="clear-display-btn" onclick="clearDisplay()">CE</button>
-                <button id="plusminus-btn" onclick="typePlusMinus()">+/-</button>
-                <button id="percentage-btn" onclick="typePercentage()">%</button>
-                <button id="divide-btn" onclick="typeDivide()">÷</button>
+                <button class="canc-clear" id="clear-display-btn" onclick="clearDisplay()">CE</button>
+                <button class="special-op" class="operators" id="plusminus-btn" onclick="typePlusMinus()">+/-</button>
+                <button class="special-op" id="percentage-btn" onclick="typePercentage()">%</button>
+                <button class="operators" id="divide-btn" onclick="typeDivide()">÷</button>
             </div>
-    
+
             <div class="second-row">
                 <button id="num1-btn" onclick="type1()">1</button>
                 <button id="num2-btn" onclick="type2()">2</button>
                 <button id="num3-btn" onclick="type3()">3</button>
-                <button id="multiply-btn" onclick="typeMultiply()">x</button>
+                <button class="operators" id="multiply-btn" onclick="typeMultiply()">x</button>
             </div>
-    
+
             <div class="third-row">
                 <button id="num4-btn" onclick="type4()">4</button>
                 <button id="num5-btn" onclick="type5()">5</button>
                 <button id="num6-btn" onclick="type6()">6</button>
-                <button id="subtract-btn" onclick="typeSubtract()">−</button>
+                <button class="operators" id="subtract-btn" onclick="typeSubtract()">−</button>
             </div>
-    
+
             <div class="fourth-row">
                 <button id="num7-btn" onclick="type7()">7</button>
                 <button id="num8-btn" onclick="type8()">8</button>
                 <button id="num9-btn" onclick="type9()">9</button>
-                <button id="add-btn" onclick="typeAdd()">+</button>
+                <button class="operators" id="add-btn" onclick="typeAdd()">+</button>
             </div>
-    
+
             <div class="fifth-row">
-                <button id="canc-btn" onclick="canc()">C</button>
+                <button class="canc-clear" id="canc-btn" onclick="canc()">C</button>
                 <button id="num0-btn" onclick="type0()">0</button>
-                <button id="dot-btn" onclick="typeDot()">.</button>
+                <button id="comma-btn" onclick="typeComma()">,</button>
                 <button id="result-btn" onclick="typeResult()">=</button>
             </div>
         </div>
